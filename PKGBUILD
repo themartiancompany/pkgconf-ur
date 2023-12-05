@@ -6,7 +6,7 @@
 
 pkgname=pkgconf
 pkgver=2.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Package compiler and linker metadata toolkit"
 url="https://gitea.treehouse.systems/ariadne/pkgconf"
 license=(custom:ISC)
@@ -42,6 +42,11 @@ pkgver() {
 
 prepare() {
   cd pkgconf
+
+  # Fix --modversion (broke WebKitGTK build)
+  # https://github.com/pkgconf/pkgconf/issues/317
+  # https://github.com/pkgconf/pkgconf/issues/332
+  git revert -n 97d907ba93b7e4eef67e4c0a80939421ad3183f0
 }
 
 build() {

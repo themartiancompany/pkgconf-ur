@@ -1,7 +1,7 @@
 pkgbase = pkgconf
 	pkgdesc = Package compiler and linker metadata toolkit
 	pkgver = 2.1.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://gitea.treehouse.systems/ariadne/pkgconf
 	arch = x86_64
 	license = custom:ISC
